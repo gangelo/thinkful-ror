@@ -1,0 +1,29 @@
+<h2>Create Article</h2>
+
+<%= render partial: 'shared/messages', object: @article%>
+
+<div class="form-container">
+  <%= form_for @article, html:{ role: "form"} do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Your article title" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control", rows: "20", placeholder: "Your article content" %>
+  </div>
+   <div class='form-group'>
+    <%= f.label "File under category(ies)" %>
+    <% Category.all.order(name: :asc).each do |category| %>
+      <div>
+        <%= check_box_tag "article[category_ids][]", category.id %>
+        <%= category.name %>
+      </div>
+    <% end %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit nil, class: "btn btn-lg btn-primary" %>
+    <%= link_to 'Cancel', articles_path %>
+  </div>
+<% end %>
+</div>

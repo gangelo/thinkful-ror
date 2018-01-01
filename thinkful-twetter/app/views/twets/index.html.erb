@@ -1,0 +1,16 @@
+<div class="clearfix top-space small"></div>
+<div class="row">
+
+  <%= render :partial => 'shared/left_nav', :object => @user, :as => 'user' %>
+
+  <div class="panel panel-default col-md-8 text-left">
+    <div class="pull-left">
+      <h4>Twets</h4>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <ol class="list-unstyled">
+      <%= render :partial => 'twet', :collection => @user.all_twets %>
+    </ol>
+  </div>
+</div>

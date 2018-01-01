@@ -1,0 +1,16 @@
+<%
+message_header = local_assigns.fetch(:message_header, "")
+style_css_class = local_assigns.fetch(:style_css_class, "")
+icon_css_class = local_assigns.fetch(:icon_css_class, "")
+%>
+
+<div class='<%= "#{style_css_class}" %>' role="alert">
+  <% if message_header.strip.length > 0 %>
+    <h3><i class='<%= "#{icon_css_class}" %>'></i> <%= message_header %></h3>
+  <% end %>
+  <ul>
+    <% display_messages.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>

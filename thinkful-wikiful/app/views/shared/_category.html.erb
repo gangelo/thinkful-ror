@@ -1,0 +1,4 @@
+<% link_to_detail = !!local_assigns.fetch(:link_to_detail, false) %>
+<div>
+  <h2><%= link_to_detail ? link_to(category.name, category) : category.name %></h2>
+</div>

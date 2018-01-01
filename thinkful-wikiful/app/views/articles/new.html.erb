@@ -1,0 +1,8 @@
+<h2>Write and Publish a New Article</h2>
+<% if @article.errors.any? %>
+  <%= render partial: 'shared/display_errors', object: @article, locals: {message_header: "Oh snap!"} %>
+<% end %>
+
+<div class="form-container">
+  <%= render partial: 'form' %>
+</div>

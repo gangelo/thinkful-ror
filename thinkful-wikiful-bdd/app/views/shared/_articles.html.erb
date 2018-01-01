@@ -1,0 +1,22 @@
+<%
+# Don't like this, but for time constraints, and the purpose of this assignment being bdd/tdd, alas... :)
+@articles = Array(@articles)
+%>
+
+<% if @articles && @articles.count > 0 %>
+  <div class='article-container' style='clear:both;'>
+    <% @articles.each do |article| %>
+      <div class='article'>
+        <div class='article-title'><%= article.title %></div>
+        <div class='article-author'>Published by <%= article.user.name %> (<%= article.user.user_name %>) on <%= article.created_at.strftime('%m/%d/%Y') %></div>
+        <div class='article-content'><%= truncate(article.content, length: 150) %></div>
+        <div class='categories'>
+          <% article.categories.each do |category| %>
+          <span class='category'><%= category.name %></span>
+          <% end %>
+        </div>
+      <div>
+      <br />
+    <% end %>
+  </div>
+<% end %>

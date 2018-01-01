@@ -1,0 +1,9 @@
+<h1>Sign Up</h1>
+
+<% if @user.errors.any? %>
+  <%= render partial: 'shared/display_errors', object: @user, locals: {message_header: "Oh snap!"} %>
+<% end %>
+
+<div class="form-container">
+  <%= render partial: 'signup_form' %>
+</div>

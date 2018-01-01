@@ -1,0 +1,38 @@
+Wikiful User Stories
+
+"Let's assume that the key to this initial version is the ability to create articles in our wiki. Then we need to be able to categorize the articles so we can find articles related to a particular topic. We're going to have to authenticate users in some way – perhaps using an email address or their facebook account.
+
+...So the key things we want are the ability to post articles, categorize them and provide a basic user login feature."
+
+
+
+Initial Requirements
+========================================
+
+As a New User, I want to be able to create a new Account, using the email address of my choice, or, my existing Facebook account.
+
+As an Existing User, I want the ability to Login the the wiki using my existing account, so that I can gain the benefits/functions of an Authenticated User.
+
+As an Authenticated User, I want the ability to Create Articles that can be posted to the wiki, so that I can contribute to the wiki's content and ultimately, its success.
+
+As an Authenticated User, I want the ability to Assign a Category to Articles I create, so that they can be found by Topic.
+
+
+
+Later Implementation (not exhaustive)
+========================================
+
+As an Authenticated user, I want the ability to Edit existing Articles, so that existing Articles can be modified.
+
+As an Authenticated user, given the proper Role, I want the ability to Delete existing Articles, so that irrelevant Articles can be purged.
+
+As an Authenticated user, I want the ability to Reset my password, so that if I forget my password, I can regain access to the wiki.
+
+As an Authenticated user, I want the ability to see Article Revisions, so that I can compare Article Revision history/changes.
+
+As an Authenticated user, given the proper Role, I want the ability to Ban Users, so that other Authenticated Users and the Integrity of the wiki content, can be protected.
+
+
+
+
+

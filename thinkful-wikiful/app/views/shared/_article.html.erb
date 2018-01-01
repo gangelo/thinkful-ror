@@ -1,0 +1,31 @@
+<% truncate_chars = local_assigns.fetch(:truncate_chars, 0).to_i %>
+<% link_to_detail = !!local_assigns.fetch(:link_to_detail, false) %>
+
+<div class='highlight'>
+  <div class='row'>
+    <div class="span9">
+      <div class="row">
+        <div class="span6">
+          <h3 style='margin-top:0;padding-top:0;margin-bottom:0;padding-bottom:0;'>
+            <%= link_to_detail ? link_to(article.title, article) : article.title %>
+          </h3>
+          <div class="row">
+            <div class="span6"><%= truncate_chars > 0 ? truncate(article.content, length: truncate_chars) : article.content %></div>
+          </div>
+        </div>
+        <div class="span3">
+          <span class='article-property'><span class='property-label'>Created:</span> <%= format_date article.created_at %></span>
+          <span class='article-property'><span class='property-label'>Updated:</span> <%= format_date article.updated_at %></span>
+          <span class='article-property'>
+          <span class='property-label'>Categories:
+            <% article.categories.each do |category| %>
+              <span class='category-label category-label-info' style="<%= css_style_from(category.label_color) %>"><%= category.name %></span>&nbsp;
+            <% end %>
+          </span>
+        </span>
+        </div>
+      </div>
+    </div>
+    <div class='span3'>&nbsp;</div>
+  </div>
+</div>

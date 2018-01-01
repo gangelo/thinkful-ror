@@ -1,0 +1,7 @@
+<% content_for :page_header do %>
+   <h1>Welcome to Wikiful!</h1>
+   <h2><%= @page_header%></h2>
+<% end %>
+<div>
+	<%= render partial: 'shared/article', collection: @articles, locals: { link_to_detail: true, truncate_chars: 100 } %>
+</div>

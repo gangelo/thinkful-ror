@@ -1,0 +1,36 @@
+$base-odd-color: #efefef;
+$base-even-color: #fff;
+
+.categories-sidebar .category-label.category-label-info a {
+  color:#fff;
+}
+
+.article-property {
+  display: block;
+
+  &>.property-label {
+    font-weight: bold;
+    color: #000;
+    background-color: none;
+  }
+}
+
+div.highlight {
+  min-height: 125px;
+  margin-bottom: 50px;
+  padding: 3px;
+}
+
+div.highlight:nth-child(odd) {background: $base-odd-color !important;}
+div.highlight:nth-child(even) {background: $base-even-color !important;}
+
+tr.highlight:nth-child(odd) {background: $base-odd-color !important;}
+tr.highlight:nth-child(even) {background: $base-even-color !important;}
+
+.form-container {
+  padding-right: 25px;
+
+  & input[type="checkbox"] {
+    margin-top:0 !important;
+  }
+}

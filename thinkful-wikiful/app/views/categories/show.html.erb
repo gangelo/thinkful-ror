@@ -1,0 +1,20 @@
+<%= render partial: 'shared/category_articles', object: @category %>
+<table class='table'>
+	<thead>
+    <tr>
+      <th>Article</th>
+      <th>Created</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @category.articles.order(created_at: :desc).each do |article| %>
+  		  <tr class='highlight'>
+          <td><%= link_to(truncate(article.title, length: 75), article) %></td>
+          <td><%= format_date article.created_at %></td>
+          <td><%= format_date article.updated_at %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>

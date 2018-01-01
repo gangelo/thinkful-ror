@@ -1,0 +1,10 @@
+<%
+messages ||= messages
+%>
+<% if messages && messages.errors.any? %>
+  <ul>
+    <% messages.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
